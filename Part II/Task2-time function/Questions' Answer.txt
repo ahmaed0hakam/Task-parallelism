@@ -1,0 +1,13 @@
+1. What is the exact execution time?
+
+Answer:
+	for task 1 with threads it's 1857900
+	for task 1 without threads it's 552700
+
+2. Is there any difference? Why?
+
+Answer: 
+	In task 1, it takes execution time with threads more than the case without threads.
+	creating a thread is a relatively expensive OS operation, and context switching is a relatively expensive operation too.
+	We will be waiting the first 4 threads to finish their works, then the fifth thread will start working, and we will be waiting again until it finishes its work.
+	So, time will be like (the sequential solution time+ creating threads time).
